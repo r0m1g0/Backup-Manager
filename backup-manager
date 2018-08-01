@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-# Copyright © 2005-2016 The Backup Manager Authors
+# Copyright ï¿½ 2005-2016 The Backup Manager Authors
 # See the AUTHORS file for details.
 #
 # This program is free software; you can redistribute it and/or
@@ -202,6 +202,9 @@ source $libdir/sanitize.sh
 
 debug "Initializing environment"
 bm_init_env
+
+debug "Initializing hourly"
+bm_init_hourly
 
 debug "Checking if logger is available"
 check_logger

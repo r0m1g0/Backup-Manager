@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-# Copyright © 2005-2016 The Backup Manager Authors
+# Copyright ï¿½ 2005-2016 The Backup Manager Authors
 #
 # See the AUTHORS file for details.
 #
@@ -148,6 +148,8 @@ confkey_require "BM_REPOSITORY_RECURSIVEPURGE" "false"
 
 confkey_handle_deprecated "BM_MAX_TIME_TO_LIVE" "BM_ARCHIVE_TTL"
 confkey_require "BM_ARCHIVE_TTL" "5"
+
+confkey_require "BM_ARCHIVE_FREQUENCY" "hourly"
 
 confkey_handle_deprecated "BM_PURGE_DUPLICATES" "BM_ARCHIVE_PURGEDUPS"
 confkey_require "BM_ARCHIVE_PURGEDUPS" "true"

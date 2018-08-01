@@ -1,4 +1,4 @@
-# Copyright © 2005-2016 The Backup Manager Authors
+# Copyright ï¿½ 2005-2016 The Backup Manager Authors
 #
 # See the AUTHORS file for details.
 #
@@ -165,7 +165,16 @@ function bm_init_env()
 function bm_init_today()
 {
     debug "bm_init_today()"
-    export TODAY=`date +%Y%m%d`                  
+    export TODAY=`date +%Y%m%d`
+}
+
+function bm_init_hourly()
+{
+    debug "bm_init_hourly()"
+
+    if [[ $BM_ARCHIVE_FREQUENCY = "hourly" ]]; then
+        export TODAY=$TODAY`date +_%H`
+    fi
 }
 
 # be sure that zip is supported.
